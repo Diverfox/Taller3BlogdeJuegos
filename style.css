@@ -1,3 +1,6 @@
+/*importing google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,900&display=swap');
+
 /* 🎨 Colores base */
 :root {
   --negro: #181818;
@@ -23,14 +26,33 @@ body {
   line-height: 1.6;
 }
 
+/* 🎮 Título principal mejorado */
+.navbar h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--morado);
+  text-align: center;
+  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
+  margin-bottom: 0.3rem;
+}
+
+.navbar h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--morado-claro);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 /* 🖤 Navbar elegante */
 .navbar {
   background-color: var(--gris-oscuro);
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   flex-direction: column;
+  border-bottom: 3px solid var(--morado-claro);
 }
 
 /* 🗂️ Pestañas elegantes debajo del título */
@@ -45,14 +67,17 @@ body {
 .navbar ul li a {
   color: var(--morado-claro);
   text-decoration: none;
-  padding: 5px 10px;
-  border-bottom: 2px solid transparent;
-  transition: color 0.3s, border-bottom-color 0.3s;
+  padding: 8px 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .navbar ul li a:hover {
-  color: var(--hover);
-  border-bottom-color: var(--morado);
+  color: var(--negro);
+  background-color: var(--hover);
+  border-radius: 5px;
 }
 
 /* 🔲 Grid elegante */
@@ -66,14 +91,13 @@ body {
 }
 
 .grid-item {
-  background-color: transparent;  /* 🟢 Fondo transparente para ocultar el grid */
-  border: none;                  /* 🟢 Elimina bordes */
-  box-shadow: none;              /* 🟢 Quita las sombras */
-  padding: 0;                    /* 🟢 Elimina el padding */
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
   text-align: center;
   transition: transform 0.3s;
 }
-
 
 .grid-item:hover {
   transform: translateY(-5px);
@@ -97,7 +121,7 @@ body {
 /* 🖼 Estilo para article y sus imágenes */
 article {
   position: relative;
-  width: 250px;          /* Mantén el tamaño de las imágenes */
+  width: 250px;
   transition: all 0.3s ease;
 }
 
