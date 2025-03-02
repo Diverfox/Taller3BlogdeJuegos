@@ -132,7 +132,7 @@ article:hover img:last-child {
 }
 
 article::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   height: 100%;
@@ -141,7 +141,7 @@ article::before {
     to bottom,
     transparent 10%,
     rgba(0, 0, 0, 0.5) 50%,
-    rgba(0, 0, 0, 0.95) 95%
+    rgba(0, 0, 0) 95%
   );
   opacity: 0;
   transition: all 0.3s ease;
@@ -149,4 +149,9 @@ article::before {
 
 article:hover::before {
   opacity: 1;
+}
+
+article:hover img:last-child {
+  opacity: 1;
+  transform: translateY(10%);
 }
