@@ -3,12 +3,34 @@
   --negro: #181818;
   --gris-oscuro: #2e2e2e;
   --gris-claro: #b0b0b0;
-  --blanco: #f5f5f5;
-  --morado: #8e44ad;
-  --morado-claro: #ffffff;
-  --hover: #ffffff;
+  --blanco: #c491fa;
+  --morado: #ffffff;
+  --morado-claro: #d693ff;
+  --hover: #c39bd3;
 }
 
+/* 👈 Alinear logo a la izquierda */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;  /* 🟢 Mantener logo a la izquierda */
+}
+
+/* 🎨 Color blanco para "Blog de juegos" */
+.lologo-text {
+  color: var(--blanco);  /* 🟢 Cambiado a blanco */
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* 📍 Centrar el título principal */
+.navbar h1 {
+  color: var(--morado);
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  text-align: center;
+}
 /* 🌟 Reset básico */
 * {
   margin: 0;
