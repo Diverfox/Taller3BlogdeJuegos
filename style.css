@@ -9,28 +9,6 @@
   --hover: #c39bd3;
 }
 
-/* 👈 Alinear logo a la izquierda */
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  align-self: flex-start;  /* 🟢 Mantener logo a la izquierda */
-}
-
-/* 🎨 Color blanco para "Blog de juegos" */
-.lologo-text {
-  color: var(--blanco);  /* 🟢 Cambiado a blanco */
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-/* 📍 Centrar el título principal */
-.navbar h1 {
-  color: var(--morado);
-  margin: 0.5rem 0;
-  font-size: 2rem;
-  text-align: center;
-}
 /* 🌟 Reset básico */
 * {
   margin: 0;
@@ -52,29 +30,7 @@ body {
   display: flex;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  flex-direction: column;  /* 🟢 Poner elementos en columna */
-}
-
-/* 👈 Alinear logo a la izquierda */
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  align-self: flex-start;  /* 🟢 Mantener logo a la izquierda */
-}
-
-.logo-text {
-  color: var(--morado);
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-/* 📍 Centrar el título principal */
-.navbar h1 {
-  color: var(--morado);
-  margin: 0.5rem 0;
-  font-size: 2rem;
-  text-align: center;
+  flex-direction: column;
 }
 
 /* 🗂️ Pestañas elegantes debajo del título */
@@ -83,7 +39,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin-top: 0.5rem;   /* 🟢 Espacio entre título y pestañas */
+  margin-top: 0.5rem;
 }
 
 .navbar ul li a {
@@ -99,29 +55,17 @@ body {
   border-bottom-color: var(--morado);
 }
 
-h1, h2 {
-  color: var(--morado);
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-h2 {
-  font-size: 1.8rem;
-}
-
 /* 🔲 Grid elegante */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 50px;  /* 🟢 Aumenté el gap para separar más las tarjetas */
+  gap: 50px;
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-
 .grid-item {
-  background-color: var(--gris-oscuro);
   border-radius: 10px;
   padding: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
@@ -148,28 +92,29 @@ h2 {
   background-color: var(--morado-claro);
 }
 
-
-/*article*/
-
-/* article */
+/* 🖼 Estilo para article y sus imágenes */
 article {
   position: relative;
   width: 250px;
   transition: all 0.3s ease;
 }
 
-/* Corregido: Selector para imágenes dentro de article */
-article img:first-child {
-  box-shadow: 0 0.5rem 0.5rem -0.5rem rgba(0, 30, 255, 0.5);
-  border-radius: 4px;
+article img {
+  width: 250px;
+  height: 350px;
   object-fit: cover;
-  width: 100%;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
-/* Corregido: Selector para la última imagen dentro de article */
+/* Estilo para la imagen de fondo (primera imagen) */
+article img:first-child {
+  box-shadow: 0 0.5rem 0.5rem -0.5rem rgba(0, 30, 255, 0.5);
+}
+
+/* Estilo para la imagen del frente (última imagen) */
 article img:last-child {
   position: absolute;
-  width: 200px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -179,8 +124,9 @@ article img:last-child {
   opacity: 0;
 }
 
-article:hover {
-  transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+article:hover img:last-child {
+  opacity: 1;
+  transform: translateY(10%);
 }
 
 article::before {
@@ -201,9 +147,4 @@ article::before {
 
 article:hover::before {
   opacity: 1;
-}
-
-article:hover img:last-child {
-  opacity: 1;
-  transform: translateY(10%);
 }
