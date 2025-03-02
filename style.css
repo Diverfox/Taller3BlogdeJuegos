@@ -285,3 +285,104 @@ header ul li a:hover {
   opacity: 1;
   transform: translateY(10%);
 }
+
+/* 🌟 Estilos Responsivos */
+
+/* Para pantallas menores a 1024px (tablets y laptops pequeñas) */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 1rem;
+  }
+
+  .navbar ul li a {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .grid-container {
+    gap: 30px;
+    padding: 15px;
+  }
+
+  article, .grid-item img {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+/* Para pantallas menores a 768px (tablets en modo vertical) */
+@media (max-width: 768px) {
+  .navbar h1 {
+    font-size: 1.5rem;
+  }
+
+  .navbar h2 {
+    font-size: 1.2rem;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+
+  article, .grid-item img {
+    width: 180px;
+    height: 270px;
+  }
+
+  header ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* 🛠 Correcciones para móviles (menores a 480px) */
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 30px; /* Aumenta la separación entre los elementos */
+  }
+
+  article, .grid-item {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 100px; /* Añade margen inferior para separar las imágenes */
+  }
+
+  /* 📏 Ajuste de tamaño fijo para imágenes en móviles */
+  article img, .grid-item img {
+    width: 100%;
+    max-width: 250px;  /* Ancho fijo para mantener consistencia */
+    height: 350px;      /* Alto fijo para uniformidad */
+    object-fit: cover;  /* Recorta para ajustar el tamaño sin deformar */
+    border-radius: 4px;
+    margin-bottom: 10px; /* Espacio entre imágenes superpuestas (si aplica) */
+  }
+
+  /* Ajuste para la barra verde de Xbox (y similares) */
+  .grid-item .xbox-banner {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px; /* Espacio debajo de la barra */
+  }
+
+  .navbar h1, .navbar h2 {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  header a {
+    display: block;
+    text-align: center;
+    margin: 0.5rem auto;
+  }
+}
+
