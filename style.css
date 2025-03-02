@@ -1,63 +1,146 @@
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
+/* 🎨 Colores base */
+:root {
+  --negro: #181818;
+  --gris-oscuro: #2e2e2e;
+  --gris-claro: #b0b0b0;
+  --blanco: #f5f5f5;
+  --morado: #8e44ad;
+  --morado-claro: #a569bd;
+  --hover: #c39bd3;
+}
+
+/* 🌟 Reset básico */
+* {
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-header {
-  background: #ff6f61;
-  color: white;
-  padding: 20px;
-  font-size: 24px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+body {
+  background-color: var(--negro);
+  color: var(--blanco);
+  line-height: 1.6;
 }
 
+/* 🖤 Navbar elegante */
+.navbar {
+  background-color: var(--gris-oscuro);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.navbar a {
+  color: var(--blanco);
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--morado-claro);
+}
+
+.logo-text {
+  color: var(--morado);
+}
+
+/* 🌸 Encabezados */
+h1, h2 {
+  color: var(--morado);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+/* 💜 Botón para volver */
+a[href="index.html"] {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 7px 20px;
+  background-color: var(--morado);
+  color: var(--blanco);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+a[href="index.html"]:hover {
+  background-color: var(--morado-claro);
+  transform: translateY(-3px);
+}
+
+/* 🔲 Grid elegante */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 20px;
-  max-width: 1000px;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .grid-item {
-  background: white;
-  padding: 10px;
+  background-color: var(--gris-oscuro);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .grid-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.7);
+}
+
+/* 🌟 Enlaces de juegos */
+.grid-item a {
+  color: var(--morado);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.grid-item a:hover {
+  color: var(--morado-claro);
+}
+
+/* 🎀 Scroll personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--morado);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--morado-claro);
+}
+
+/* 🌌 Efectos sutiles */
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo h2 {
+  margin-left: 10px;
 }
 
 .grid-item img {
-  width: 100%;
-  border-radius: 10px;
-  filter: grayscale(30%);
-  transition: filter 0.3s ease-in-out;
-}
-
-.grid-item:hover img {
-  filter: grayscale(0%);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.grid-item {
-  animation: fadeIn 0.5s ease-in-out;
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
