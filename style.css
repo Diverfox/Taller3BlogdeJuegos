@@ -1,63 +1,148 @@
-body {
-  font-family: Arial, sans-serif;
+/* 🎨 Colores base */
+:root {
+  --negro: #181818;
+  --gris-oscuro: #2e2e2e;
+  --gris-claro: #b0b0b0;
+  --blanco: #c491fa;
+  --morado: #ffffff;
+  --morado-claro: #d693ff;
+  --hover: #c39bd3;
+}
+
+/* 👈 Alinear logo a la izquierda */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;  /* 🟢 Mantener logo a la izquierda */
+}
+
+/* 🎨 Color blanco para "Blog de juegos" */
+.lologo-text {
+  color: var(--blanco);  /* 🟢 Cambiado a blanco */
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* 📍 Centrar el título principal */
+.navbar h1 {
+  color: var(--morado);
+  margin: 0.5rem 0;
+  font-size: 2rem;
   text-align: center;
+}
+/* 🌟 Reset básico */
+* {
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-header {
-  background: #ff6f61;
-  color: white;
-  padding: 20px;
-  font-size: 24px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+body {
+  background-color: var(--negro);
+  color: var(--blanco);
+  line-height: 1.6;
 }
 
+/* 🖤 Navbar elegante */
+.navbar {
+  background-color: var(--gris-oscuro);
+  padding: 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  flex-direction: column;  /* 🟢 Poner elementos en columna */
+}
+
+/* 👈 Alinear logo a la izquierda */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;  /* 🟢 Mantener logo a la izquierda */
+}
+
+.logo-text {
+  color: var(--morado);
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* 📍 Centrar el título principal */
+.navbar h1 {
+  color: var(--morado);
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* 🗂️ Pestañas elegantes debajo del título */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 0.5rem;   /* 🟢 Espacio entre título y pestañas */
+}
+
+.navbar ul li a {
+  color: var(--morado-claro);
+  text-decoration: none;
+  padding: 5px 10px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: var(--hover);
+  border-bottom-color: var(--morado);
+}
+
+h1, h2 {
+  color: var(--morado);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+/* 🔲 Grid elegante */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 20px;
-  max-width: 1000px;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .grid-item {
-  background: white;
-  padding: 10px;
+  background-color: var(--gris-oscuro);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .grid-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.7);
 }
 
-.grid-item img {
-  width: 100%;
-  border-radius: 10px;
-  filter: grayscale(30%);
-  transition: filter 0.3s ease-in-out;
+/* 🎀 Scroll personalizado */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.grid-item:hover img {
-  filter: grayscale(0%);
+::-webkit-scrollbar-thumb {
+  background-color: var(--morado);
+  border-radius: 5px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.grid-item {
-  animation: fadeIn 0.5s ease-in-out;
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--morado-claro);
 }
